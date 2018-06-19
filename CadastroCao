@@ -48,7 +48,7 @@ public CadastroCao(){
 
 public void gerarTela(){
     jFrame = new JFrame();
-    jFrame.setSize(656,450);
+    jFrame.setSize(601,415);
     jFrame.setLayout(null);
     jFrame.setLocationRelativeTo(null);
     jFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
