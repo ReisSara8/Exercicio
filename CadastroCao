@@ -1,0 +1,152 @@
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JFrame;
+import static javax.swing.JFrame.EXIT_ON_CLOSE;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+/**
+ * @author Alunos
+ */
+public class CadastroCao {
+    //TODO nome
+    //TODO idade
+    //TODO raca
+    //TODO apelido
+    //TODO preco
+    //TODO vivo
+    //TODO morto
+    //TODO racao
+    //TODO come almoços, jantas
+    //TODO Adestrado
+    //TODO Cadastrado
+    //TODO pedigree
+    //TODO cancelar
+    //TODO salvar
+    
+    private JTextField jTextFieldNome, jTextFieldIdade, jTextFieldApelido,
+            jTextFieldPreco, jTextFieldDescricao;
+    private JCheckBox jCheckBoxVivo, jCheckBoxMorto, jCheckBoxRacao,
+            jCheckBoxComeAlmoco, jCheckBoxAdestrado,jCheckBoxCadastrado,
+            jCheckBoxVacinado,jCheckBoxPedigree;
+    private JButton jButtonCancelar, jButtonSalvar;
+    private JFrame jFrame;
+    private 
+    
+public CadastroCao(){
+        instanciarComponentes();
+        gerarTela();
+        adicionarComponentes();
+        gerarLocalizacoes();
+        gerarDimensoes();
+        acaoBotaoSalvar();
+        acaoBotaoCancelar();
+};
+
+public void gerarTela(){
+    jFrame = new JFrame();
+    jFrame.setSize(656,450);
+    jFrame.setLayout(null);
+    jFrame.setLocationRelativeTo(null);
+    jFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+}
+
+public void adicionarComponentes(){
+    jFrame.add(jTextFieldNome);
+    jFrame.add(jTextFieldIdade);
+    //jFrame.add(jTextFieldRaca);
+    jFrame.add(jTextFieldApelido);
+    jFrame.add(jTextFieldPreco);
+    jFrame.add(jTextFieldDescricao);
+    jFrame.add(jCheckBoxVivo);
+    jFrame.add(jCheckBoxMorto);
+    jFrame.add(jCheckBoxRacao);
+    jFrame.add(jCheckBoxComeAlmoco);
+    jFrame.add(jCheckBoxAdestrado);
+    jFrame.add(jCheckBoxVacinado);
+    jFrame.add(jCheckBoxPedigree);
+    jFrame.add(jButtonSalvar);
+    jFrame.add(jButtonCancelar);
+}
+
+public void instanciarComponentes(){
+    jTextFieldNome = new JTextField("Nome:");
+    jTextFieldIdade = new JTextField("Idade");
+//    jTextFieldRaca = new JTextField("Raça:");
+    jTextFieldApelido = new JTextField("Apelido:");
+    jTextFieldPreco = new JTextField("Preço:");
+    jTextFieldDescricao = new JTextField("Preço:");
+    jCheckBoxVivo = new JCheckBox("Vivo");
+    jCheckBoxMorto = new JCheckBox("Morto");
+    jCheckBoxRacao = new JCheckBox("Ração");
+    jCheckBoxComeAlmoco = new JCheckBox("Come almoços, jantaa");
+    jCheckBoxAdestrado = new JCheckBox("Adestrado");
+    jCheckBoxVacinado = new JCheckBox("Vacinado");
+    jCheckBoxPedigree = new JCheckBox("Tem pedigree");
+    jButtonSalvar = new JButton("Salvar");
+    jButtonCancelar = new JButton("Cancelar");
+}
+
+public void gerarLocalizacoes(){
+        /*jTextFieldNome.setLocation(12,56);
+        jTextFieldIdade.setLocation(12,114);
+        Raca.setLocation(12,);
+        jTextFieldApelido.setLocation(12,);
+        jTextFieldPreco.setLocation(12,);
+        jTextFieldDescricao.setLocation(12,);
+        jCheckBoxVivo.setLocation(12,);
+        jCheckBoxMorto.setLocation(12,);
+        jCheckBoxRacao.setLocation(12,);
+        jCheckBoxComeAlmoco.setLocation(12,);
+        jCheckBoxAdestrado.setLocation(12.);
+        jCheckBoxVacinado.setLocation(12,);
+        jCheckBoxPedigree.setLocation(12,);
+        jCheckBoxVacinado.setLocation(12,);
+        jButtonSalvar.setLocation(12,);
+        jButtonCancelar.setLocation(12,);*/
+     
+} 
+
+public void gerarDimensoes(){
+        jTextFieldNome.setSize(344,22);
+        jTextFieldIdade.setSize(188,22);
+       /* Raca.setSize(147,22);
+        jTextFieldApelido.setSize(164,22);
+        jTextFieldPreco.setSize(188,22);
+        jTextFieldDescricao.setSize(584,85);
+        jCheckBoxVivo.setSize();
+        jCheckBoxMorto.setSize();
+        jCheckBoxRacao.setSize();
+        jCheckBoxComeAlmoco.setSize();
+        jCheckBoxAdestrado.setSize();
+        jCheckBoxVacinado.setSize();
+        jCheckBoxPedigree.setSize();
+        jCheckBoxVacinado.setSize();
+        jButtonSalvar.setSize(129,65);
+        jButtonCancelar.setSize(129,65);*/
+}
+
+public void acaoBotaoSalvar(){
+}
+
+public void acaoBotaoCancelar(){
+        jButtonCancelar.addActionListener(new ActionListener() {
+            @Override
+                public void actionPerformed(ActionEvent e){
+        jCheckBoxVivo.setSelected(false);
+        jCheckBoxMorto.setSelected(false);
+        jCheckBoxRacao.setSelected(false);
+        jCheckBoxComeAlmoco.setSelected(false);
+        jCheckBoxAdestrado.setSelected(false);
+        jCheckBoxVacinado.setSelected(false);
+        jCheckBoxPedigree.setSelected(false);
+        
+       }
+    });
+        
+    }
+
+}
